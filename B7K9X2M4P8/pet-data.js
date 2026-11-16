@@ -37,7 +37,7 @@ window.PETLINK_DATA = {
     "contactName": "Moraima",
     "contactNote": "Contacto principal · disponible para recibir avisos",
     "whatsapp": "529933954892",
-    "whatsappMessage": "Hola, encontré a Luna. Quiero ayudarla a volver a casa.",
+    "whatsappMessage": "Hola, encontré a Bellota. Quiero ayudarla a volver a casa.",
     "lost": false
   },
   "copy": {
