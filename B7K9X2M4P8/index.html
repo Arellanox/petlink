@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b2b">
+<meta name="description" content="Ficha digital de identificación para mascotas. Ayúdanos a reunir a esta mascota con su familia.">
+<title>Ficha de mascota · PETLINK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="https://unpkg.com/lucide@latest"></script>
+<script defer src="pet-data.js"></script><script defer src="app.js"></script></head><body>
+<div class="page-shell">
+<header class="topbar reveal"><a class="brand" href="#inicio"><span class="brand-mark"><i data-lucide="paw-print"></i></span><span>PET<span>LINK</span></span></a><div class="secure-label"><span class="secure-dot"></span><span id="statusText"></span></div></header>
+<main id="inicio">
+<section class="hero-card reveal"><div class="hero-photo-wrap"><img class="hero-photo" id="petPhoto" alt=""><div class="photo-shade"></div>
+<div class="photo-topline"><span class="live-pill"><span></span><span id="identifiedText"></span></span><button class="icon-button" id="sharePage" aria-label="Compartir ficha"><i data-lucide="share-2"></i></button></div>
+<div class="hero-copy"><div class="eyebrow" id="heroEyebrow"></div><h1><span id="petName"></span><span class="name-heart">✳</span></h1><p id="petMessage"></p></div></div>
+<div class="pet-facts"><div class="fact"><span class="fact-icon"><i data-lucide="dog"></i></span><span><small>Raza</small><strong id="petBreed"></strong></span></div>
+<div class="fact"><span class="fact-icon"><i data-lucide="calendar-days"></i></span><span><small>Edad</small><strong id="petAge"></strong></span></div>
+<div class="fact"><span class="fact-icon"><i data-lucide="venus"></i></span><span><small>Sexo</small><strong id="petSex"></strong></span></div></div></section>
+<section class="notice-card reveal"><div class="notice-icon"><i data-lucide="heart-handshake"></i></div><div><span class="section-kicker" id="familyEyebrow"></span><h2 id="familyTitle"></h2><p id="familyMessage"></p></div></section>
+<section class="section-block reveal"><div class="section-heading"><div><span class="section-kicker" id="careEyebrow"></span><h2 id="careTitle"></h2></div><span class="heading-icon"><i data-lucide="shield-check"></i></span></div><div class="care-grid" id="careGrid"></div></section>
+<section class="contact-card reveal"><div class="contact-orbit orbit-one"></div><div class="contact-orbit orbit-two"></div><div class="contact-content">
+<span class="section-kicker light" id="contactEyebrow"></span><h2 id="contactTitle"></h2><p id="contactDescription"></p>
+<a class="whatsapp-button" id="whatsappLink" href="#" target="_blank" rel="noopener"><i data-lucide="message-circle"></i><span id="whatsappButtonText"></span><i data-lucide="arrow-up-right" class="arrow"></i></a>
+<button class="location-button" id="shareLocation"><i data-lucide="map-pin"></i><span id="locationButtonText"></span></button><small class="privacy-note"><i data-lucide="lock"></i><span id="privacyText"></span></small></div></section>
+<section class="owner-card reveal"><div class="owner-avatar"><i data-lucide="user-round"></i></div><div class="owner-info"><span class="section-kicker" id="contactSection"></span><strong id="contactName"></strong><small id="contactNote"></small></div><span class="verified"><i data-lucide="badge-check"></i></span></section>
+<section class="bottom-note reveal"><span class="bottom-paw"><i data-lucide="paw-print"></i></span><p id="footerNote"></p></section></main>
+<footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark"><i data-lucide="paw-print"></i></span><span>PET<span>LINK</span></span></a><p id="footerText"></p><small>Ficha estática · Datos editables en pet-data.js</small></footer></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div></body></html>
