@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f83">
+  <meta name="description" content="Activa tu PETLINK y crea la ficha digital de tu mascota.">
+
+  <title>Activa tu PETLINK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="page">
+
+    <header class="brand">
+      <div class="brand-icon">🐾</div>
+      <div class="brand-name">PETLINK</div>
+      <div class="brand-caption">Su historia, siempre cerca</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-illustration" aria-hidden="true">
+        <div class="paw paw-one">🐾</div>
+        <div class="pet-emoji">🐶</div>
+        <div class="paw paw-two">🐾</div>
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+      </div>
+
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        Identificador pendiente de activación
+      </span>
+
+      <h1>Muy pronto aquí aparecerá la historia de tu amigo peludo.</h1>
+
+      <p class="hero-description">
+        Este pequeño espacio está esperando conocer a quien hace tus días
+        más felices. Cuando su familia active PETLINK, aquí encontrarás
+        su información y la manera de ayudarle a volver a casa si algún
+        día se pierde.
+      </p>
+
+      <div class="device-card">
+        <span class="device-label">IDENTIFICADOR PETLINK</span>
+        <strong id="deviceId">PL-7K9M2X</strong>
+        <span class="device-help">Este código identifica tu dispositivo.</span>
+      </div>
+
+      <button class="primary-button" id="openForm">
+        Activar mi PETLINK <span>→</span>
+      </button>
+
+      <p class="privacy-note">
+        🔒 Tus datos serán utilizados para preparar la ficha digital de tu mascota.
+      </p>
+    </section>
+
+    <section class="form-section" id="activationSection" hidden>
+
+      <div class="form-heading">
+        <span class="eyebrow">UN ESPACIO PARA SU HISTORIA</span>
+        <h2>Conozcamos a tu mascota</h2>
+        <p>
+          Cuéntanos un poquito sobre ella. Con esta información prepararemos
+          su ficha digital para que pueda ser reconocida y regresar a casa.
+        </p>
+      </div>
+
+      <form id="activationForm">
+
+        <div class="form-device">
+          <span>Tu identificador</span>
+          <strong id="formDeviceId">PL-7K9M2X</strong>
+        </div>
+
+        <div class="form-group">
+          <label for="petName">¿Cómo se llama tu mascota? *</label>
+          <input type="text" id="petName" name="petName"
+                 placeholder="Ej. Max" maxlength="60" required>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="breed">Raza</label>
+            <input type="text" id="breed" name="breed"
+                   placeholder="Ej. Labrador, mestizo...">
+          </div>
+
+          <div class="form-group">
+            <label for="sex">Sexo</label>
+            <select id="sex" name="sex">
+              <option value="">Seleccionar</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+              <option value="No especificado">Prefiero no especificar</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="section-divider">
+          <span>Fecha de nacimiento</span>
+        </div>
+
+        <p class="field-instruction">
+          Si conoces la fecha exacta, indícala. Si no, puedes proporcionar
+          solamente el año aproximado.
+        </p>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="birthDate">Fecha de nacimiento</label>
+            <input type="date" id="birthDate" name="birthDate">
+          </div>
+
+          <div class="form-group">
+            <label for="birthYear">O solamente el año</label>
+            <input type="number" id="birthYear" name="birthYear"
+                   placeholder="Ej. 2022" min="1990" max="2026">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="photoInfo">Fotografía de tu mascota</label>
+          <div class="photo-notice">
+            <span class="photo-notice-icon">📷</span>
+            <div>
+              <strong>¡Queremos conocer su carita!</strong>
+              <p>
+                Después de enviar este formulario, adjunta una fotografía
+                de tu mascota directamente en el chat de WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider">
+          <span>Su personalidad</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Un mensaje sobre tu mascota</label>
+          <textarea id="message" name="message" rows="3"
+            placeholder="Ej. Soy juguetón, cariñoso y me encanta correr..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="familyMessage">Un mensaje de su familia</label>
+          <textarea id="familyMessage" name="familyMessage" rows="3"
+            placeholder="Ej. Es parte de nuestra familia. Si me encuentras, por favor ayúdame a regresar a casa."></textarea>
+        </div>
+
+        <div class="section-divider">
+          <span>Salud y cuidados importantes</span>
+        </div>
+
+        <div class="form-group">
+          <label for="allergies">Alergias</label>
+          <textarea id="allergies" name="allergies" rows="2"
+            placeholder="Indica si tiene alergias o escribe Ninguna conocida."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="medication">Medicamentos y tratamientos</label>
+          <textarea id="medication" name="medication" rows="3"
+            placeholder="Medicamento, dosis, frecuencia u otras indicaciones. Si no toma medicamentos, escribe Ninguno."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="vaccination">Vacunación</label>
+          <textarea id="vaccination" name="vaccination" rows="3"
+            placeholder="Vacunas aplicadas, fechas o si tiene su esquema de vacunación al corriente."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="sterilized">¿Está esterilizada o castrado?</label>
+          <select id="sterilized" name="sterilized">
+            <option value="">Seleccionar</option>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+            <option value="No lo sé">No lo sé</option>
+          </select>
+        </div>
+
+        <div class="section-divider">
+          <span>Su persona de contacto</span>
+        </div>
+
+        <div class="form-group">
+          <label for="contactName">Nombre del responsable *</label>
+          <input type="text" id="contactName" name="contactName"
+                 placeholder="Nombre de la persona responsable"
+                 maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contactNote">Nota para quien encuentre a tu mascota</label>
+          <textarea id="contactNote" name="contactNote" rows="2"
+            placeholder="Ej. Por favor, no intentes perseguirlo. Es tímido."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="contactWhatsapp">WhatsApp de contacto</label>
+          <input type="tel" id="contactWhatsapp" name="contactWhatsapp"
+                 inputmode="numeric" placeholder="10 dígitos"
+                 maxlength="10">
+          <small>
+            Este número aparecerá en la ficha digital para que puedan
+            comunicarse contigo si encuentran a tu mascota.
+          </small>
+        </div>
+
+        <div class="consent-box">
+          <label class="consent-option">
+            <input type="checkbox" id="privacyConsent" required>
+            <span>
+              Acepto que PETLINK utilice los datos proporcionados para
+              preparar la ficha digital de mi mascota y que la información
+              de contacto indicada se muestre en dicha ficha. *
+            </span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+
+          <button type="submit" class="primary-button submit-button">
+            Enviar datos por WhatsApp <span>→</span>
+          </button>
+
+          <p class="form-footnote">
+            Se abrirá WhatsApp con tus respuestas preparadas. Solo tendrás
+            que enviar el mensaje y adjuntar la fotografía de tu mascota.
+          </p>
+
+          <button type="button" class="back-button" id="backToHome">
+            Volver a la página anterior
+          </button>
+
+        </div>
+
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-paw">🐾</div>
+      <strong>PETLINK</strong>
+      <p>Porque cada mascota merece volver a casa.</p>
+      <span>Un pequeño identificador, una gran historia.</span>
+    </footer>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
